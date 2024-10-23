@@ -1,47 +1,43 @@
 {% extends "Account/main.html" %}
 
 {% block content %}
- 
-<div class="sidebar">
-    <h4 class="text-center">My Dashboard</h4>
-    <a href="#">Overview</a>
-    <a href="#">Analytics</a>
-    <a href="#">Reports</a>
-    <a href="#">Settings</a>
-</div>
 
-<div class="content">
-    <div class="container">
-        <h2>Welcome to the Dashboard</h2>
-        <p>This is a simple dashboard layout where you can customize your content.</p>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Widget 1</h5>
-                        <p class="card-text">Some text about this widget.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Widget 2</h5>
-                        <p class="card-text">Some text about this widget.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Widget 3</h5>
-                        <p class="card-text">Some text about this widget.</p>
-                    </div>
-                </div>
-            </div>
+{% include "Account/status.html" %}
+<br>
+<div class="row">
+    <div class="col-md-5">
+        <h5>CUSTOMERS:</h5>
+        <hr>
+        <div class="card card-body">
+            <a class="btn btn-primary btn-sm btn-block" href="">Create Customer</a>
+            <table class="table table-sm">
+                <tr>
+                    <th></th>
+                    <th>Customer</th>
+                    <th>Orders</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-md-7">
+        <h5>LAST 5 ORDERS:</h5>
+        <hr>
+        <div class="card card-body">
+            <a class="btn btn-primary btn-sm btn-block" href="">Create Order</a>
+            <table class="table table-sm">
+                <tr>
+                    <th>Product</th>
+                    <th>Date Ordered</th>
+                    <th>Status</th>
+                    <th>Update</th>
+                    <th>Remove</th>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
+<hr>
     
 {% endblock %}
 
